@@ -73,10 +73,11 @@ void draw()
                 if (x > max_x) x = max_x;
                 break;
             default:
-                // cout << "unknown key";
+                cout << " error: unknown key";
                 ;
             }
             put_symb(x, y);
+            move = false;
         }
         Sleep(50);
     }
