@@ -12,6 +12,10 @@ const int RIGHT = 77;
 
 const int center_x = 60;
 const int center_y = 15;
+const int max_x = 119;
+const int max_y = 29;
+const int min_x = 1;
+const int min_y = 0;
 
 const int stat_x = 100;
 const int stat_y = 25;
@@ -54,15 +58,19 @@ void draw()
             {
             case UP:
                 y--;
+                if (y < min_y) y = min_y;
                 break;
             case DOWN:
                 y++;
+                if (y > max_y) y = max_y;
                 break;
             case LEFT:
                 x--;
+                if (x < min_x) x = min_x;
                 break;
             case RIGHT:
                 x++;
+                if (x > max_x) x = max_x;
                 break;
             default:
                 // cout << "unknown key";
